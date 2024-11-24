@@ -2,98 +2,77 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공주고 3D 프린터실</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/Search.css">
-    <link rel="shortcut icon" type="x-icon" href="source/img/LogoIcon.png">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  </head>
-  
-  <body>
-    <header>
-      <a href="/"><img src="source/img/logo.png"></a>
-      <input type="checkbox" id="menu-bar">
-      <label for="menu-bar" class="menu"><i class='bx bx-menu'></i></label>
-      <nav class="navbar">
-        <ul>
-          <li><a href="/">홈</a></li>
-          <li><a href="/Esetimate">견적</a></li>
-          <li><a href="/Ask">신청</a></li>
-          <li><a href="/Search">조회</a></li>
-          <li><a href="/Inquiry">문의</a></li>
-          <li class="loginInMenu"><a href="/api/login">로그인</a></li>
-          <li class="userInMenu"><a href="/api/user">프로필</a></li>
-        </ul>
-      </nav>
-      <nav class="LoginWrap">
-        <a href="/api/login" class="login">로그인</a>
-        <a href="/api/user" class="user" style="display: none;"><i class='bx bxs-user-circle'></i></a>
-      </nav>
-      <script>
-        function handleResize() {
-        const loginInMenu = document.querySelector('.loginInMenu');
-        const userInMenu = document.querySelector('.userInMenu');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>공주고 3D 프린터실</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/Search.css">
+  <link rel="shortcut icon" type="x-icon" href="source/img/LogoIcon.png">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <header>
+    <a href="/"><img src="source/img/logo.png"></a>
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar" class="menu"><i class='bx bx-menu'></i></label>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/">소개</a></li>
+        <li><a href="/Ask">신청</a></li>
+        <li><a onclick="NotYet()">조회</a></li>
+        <!-- <li><a href="/Search">조회</a></li> -->
+        <li><a href="https://slashpage.com/kongjugo3droom">커뮤니티</a></li>
+      </ul>
+    </nav>
+    <script>
+      function NotYet() {
+        alert("현재 개발 중으로 접속 불가능하십니다.");
+      }
+
+      function handleResize() {
         const MenuBar = document.querySelector('.menu');
 
         if (window.innerWidth <= 991) {
-          loginInMenu.style.display = 'initial';
-          userInMenu.style.display = 'none';
           MenuBar.style.display = "initial";
         } else {
-          loginInMenu.style.display = 'none';
-          userInMenu.style.display = 'none';
           MenuBar.style.display = "none";
         }
       }
-  
-        handleResize();
-  
-        window.addEventListener('resize', handleResize);
-      </script>
-    </header>
-    
-    <section>
-        <!-- 검색엔진 -->
-        <div class="SearchBar-Wrap">
-            <h2>배송조회</h2>
-            <form class="SearchBar-Group" method="get" action="/api/Search">
-                <input type="search" name="search" id="search" placeholder="검색어를 입력하세요">
-                <button type="submit"><i class='bx bx-search-alt-2'></i></button>
-            </form>   
-        </div>
-    </section>
-    <footer>
-        <div class="row">
-            <div class="col">
-                <img src="source/img/logo.png" class="logo">
-                <p>공주고 3D프린터실은 요청하시는 모든 것을 프린팅해주는 서비스입니다.</p>
-            </div>
-            <div class="col">
-                <h3>찾아오는 길</h3>
-                <p>공주고등학교 과학정보관 2층 3D프린터실</p>
-                <p><a href="https://maps.app.goo.gl/9DQKK5ZnkdAi4hfk6">충청남도 공주시 공주고담길 2 (중학동)</a></p>
-            </div>
-            <div class="col">
-                <h3>바로가기</h3>
-                <ul>
-                    <li><a href="/Info">소개</a></li>
-                    <li><a href="/Esetimate">견적</a></li>
-                    <li><a href="/Ask">신청</a></li>
-                    <li><a href="/Such">조회</a></li>
-                    <li><a href="/Inquery">문의</a></li>
-                </ul>
-            </div>
-            <div class="col">
-                <h3>연락처</h3>
-                <p>Web Manage <a href="mailto:20231601@kongjugo.cnehs.kr">20231601@kongjugo.cnehs.kr</a></p>
-                <p>Print Manger <a href="mailto:20231720@kongjugo.cnehs.kr">20231720@kongjugo.cnehs.kr</a></p>
-            </div>
-        </div>
-        <hr>
-        <p class="copyright">Kongjugo 3D Printer Room @2024 - All Rights Reserved</p>
-    </footer>
+
+      handleResize();
+
+      window.addEventListener('resize', handleResize);
+    </script>
+  </header>
+
+  <section>
+    <!-- 검색엔진 -->
+    <div class="SearchBar-Wrap">
+      <h2>배송조회</h2>
+      <form class="SearchBar-Group" method="get" action="/api/Search">
+        <input type="search" name="search" id="search" placeholder="검색어를 입력하세요">
+        <button type="submit"><i class='bx bx-search-alt-2'></i></button>
+      </form>
+    </div>
+  </section>
+  <!-- 풋터 -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>공주고 3D 프린터실</h3>
+        <p>원하는 모든 것, 3D프린터로 출력해드리는 서비스입니다.</p>
+      </div>
+      <div class="footer-section">
+        <h3>연락처</h3>
+        <p>주소: 충청남도 공주시 공주고담길2 (과학정보관 2층)</p>
+        <p>메일: 20231601@kongjugo.cnehs.kr</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 공주고 3D 프린터실. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 
 </html>

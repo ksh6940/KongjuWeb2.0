@@ -20,12 +20,16 @@
       <ul>
         <li><a href="/">소개</a></li>
         <li><a href="/Ask">신청</a></li>
-        <li><a href="/Search">조회</a></li>
-        <li><a href="/Option">옵션</a></li>
-        <li><a href="/Inquiry">문의</a></li>
+        <li><a onclick="NotYet()">조회</a></li>
+        <!-- <li><a href="/Search">조회</a></li> -->
+        <li><a href="https://slashpage.com/kongjugo3droom">커뮤니티</a></li>
       </ul>
     </nav>
     <script>
+      function NotYet(){
+        alert("현재 개발 중으로 접속 불가능하십니다.");
+      }
+
       function handleResize() {
         const MenuBar = document.querySelector('.menu');
 

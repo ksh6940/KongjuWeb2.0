@@ -20,12 +20,16 @@
             <ul>
                 <li><a href="/">소개</a></li>
                 <li><a href="/Ask">신청</a></li>
-                <li><a href="/Search">조회</a></li>
-                <li><a href="/Option">옵션</a></li>
-                <li><a href="/Inquiry">문의</a></li>
+                <li><a onclick="NotYet()">조회</a></li>
+                <!-- <li><a href="/Search">조회</a></li> -->
+                <li><a href="https://slashpage.com/kongjugo3droom">커뮤니티</a></li>
             </ul>
         </nav>
         <script>
+            function NotYet() {
+                alert("현재 개발 중으로 접속 불가능하십니다.");
+            }
+
             function handleResize() {
                 const MenuBar = document.querySelector('.menu');
 
@@ -115,18 +119,18 @@
                     },
                     body: JSON.stringify(dataToSend)
                 })
-                .then(response => response.json())
-                .then(data => {
-                    // 서버의 응답에 따라 페이지 이동 및 데이터 전달
-                    if (data.nextPage) {
-                        // 데이터 전달을 위해 queryString 추가
-                        const queryString = new URLSearchParams(dataToSend).toString();
-                        window.location.href = `${data.nextPage}?${queryString}`; // 서버가 보낸 URL로 이동
-                    }
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
+                    .then(response => response.json())
+                    .then(data => {
+                        // 서버의 응답에 따라 페이지 이동 및 데이터 전달
+                        if (data.nextPage) {
+                            // 데이터 전달을 위해 queryString 추가
+                            const queryString = new URLSearchParams(dataToSend).toString();
+                            window.location.href = `${data.nextPage}?${queryString}`; // 서버가 보낸 URL로 이동
+                        }
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                    });
             }
         </script>
     </section>
