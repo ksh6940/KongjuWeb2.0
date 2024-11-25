@@ -165,12 +165,6 @@ section {
     gap: 12rem; /* 간격을 3rem으로 설정하여 간격을 늘림 */
 }
 
-.Map {
-    max-width: 100%;
-    width: 220px;
-    margin: 0.8rem 0 0.8rem;
-}
-
 .Contact-text span {
     color: var(--main-color);
     font-weight: 600;
@@ -290,19 +284,6 @@ section {
         gap: 1rem;
     }
 
-    .Map {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    .Map iframe {
-        width: 350px;
-        height: 350px;
-    }
-
     .Adress span, .tel span {
         font-size: 14px;
     }
@@ -372,14 +353,6 @@ section {
         display: flex;
         flex-direction: column;
         gap: 3rem;
-    }
-
-    .Map {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
     }
 
     .Adress h2, .tel h2 {
