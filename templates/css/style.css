@@ -26,7 +26,8 @@ section {
     height: auto;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: calc(100vh - 70px); /* header 높이를 제외한 영역 */
+    padding-top: 70px; /* header 높이만큼 여백 추가 */
 }
 
 /* header */
