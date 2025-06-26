@@ -224,7 +224,7 @@ app.get("/api/search/:keyword", async (req, res) => {
 // MongoDB 연결 및 서버 실행
 mongoose
   .connect(
-    "mongodb+srv://rkdtjrgh124:AOxDsBMgg8cP0Gih@webtable.g2ha8vc.mongodb.net/Node-API?retryWrites=true&w=majority&appName=WebTable"
+    // MongoDB Key
   )
   .then(() => {
     console.log("MongoDB 연결 성공");
